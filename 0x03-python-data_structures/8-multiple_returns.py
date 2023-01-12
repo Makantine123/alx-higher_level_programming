@@ -7,6 +7,6 @@ def multiple_returns(sentence):
     else:
         strlen = len(sentence)
         firstChar = sentence[0]
-    
+
     tupleR = (strlen, firstChar)
     return tupleR
