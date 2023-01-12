@@ -1,12 +1,8 @@
 #!/usr/bin/python3
 
 def multiple_returns(sentence):
-    if sentence <> "":
-        strlen = len(sentence)
-        firstChar = sentence[0]
-    else:
-        strlen = 0
-        firstChar = None
-
+    strlen = len(sentence)
+    firstChar = sentence[0]
+    
     tupleR = (strlen, firstChar)
     return tupleR
