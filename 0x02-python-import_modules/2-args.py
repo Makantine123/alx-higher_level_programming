@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     import sys
     numArg = len(sys.argv) - 1
-    if (numArg == 0):
+    if (numArg == 1):
         print("{:d} argument:".format(numArg))
     else:
         print("{:d} arguments:".format(numArg))
