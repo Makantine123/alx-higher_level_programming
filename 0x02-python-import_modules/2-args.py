@@ -5,7 +5,7 @@ if __name__ == "__main__":
     if (numArg == 0):
         print("{:d} argument:".format(numArg))
     elif (numArg == 1):
-        print("{:d} argument".format(numArg))
+        print("{:d} argument:".format(numArg))
         print("1: {}".format(sys.argv[1]))
     else:
         print("{:d} arguments:".format(numArg))
