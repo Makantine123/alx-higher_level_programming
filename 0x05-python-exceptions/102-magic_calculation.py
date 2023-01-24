@@ -8,11 +8,12 @@ def magic_calculation(a, b):
                 raise Exception('Too far')
             else:
                 result += (a ** b) / i
-        except:
+        except Exception:
             result = a + b
             break
     return (result)
 
-if __name__== "__main__":
+
+if __name__ == "__main__":
     import dis
     dis.dis(magic_calculation)
