@@ -1,3 +1,3 @@
-#!/usr/bin/bash/python3
+#!/usr/bin/python3
 # Empty class that defines a square
 class Square:
