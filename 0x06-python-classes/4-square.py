@@ -3,7 +3,8 @@
 
 
 class Square:
-    """Class square contains size, raises type and value errors, return area, has property"""
+    """Class square contains size, raises type and value errors, return area,
+    has property"""
     def __init__(self, size=0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
