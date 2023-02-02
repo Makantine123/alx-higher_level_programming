@@ -33,14 +33,14 @@ class Square:
     @property
     def position(self):
         """The position property."""
-        return self._position_position
+        return self.__position
 
     @position.setter
     def position(self, value):
         """Set the position of the square"""
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self._position = value
+        self.__position = value
 
     def my_print(self):
         """Prints to standard output the square using # else and empty line"""
