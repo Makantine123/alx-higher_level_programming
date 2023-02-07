@@ -77,15 +77,11 @@ class SinglyLinkedList:
         -def sorted_insert(self, value)
       """
     def __init__(self):
-         """
-        Class initializer
-        """
+         """Class initializer"""
         self.__head = None
 
     def sorted_insert(self, value):
-        """
-        Inserts new Node
-        """
+        """Inserts new Node"""
         if self.__head is None:
             self.__head = Node(value)
         else:
