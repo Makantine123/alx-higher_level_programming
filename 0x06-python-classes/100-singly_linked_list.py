@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """Module defines a class Node"""
 
+
 class Node:
-""" Defines a class node of a singly linked list
+    """ Defines a class node of a singly linked list
         - def __init__(self, data, next_node=None)
     Private instance attribute data:
         -def data(self)
@@ -12,8 +13,7 @@ class Node:
         -def next_node(self)
         -def next_node(self, value)
         -value can be node or None else raise TypeError
-
-    """
+        """
 
     def __init__(self, data, next_node=None):
         """Initialization of the dta node"""
