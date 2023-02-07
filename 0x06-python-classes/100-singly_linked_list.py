@@ -27,25 +27,23 @@ class Node:
     @property
     def data(self):
         """The data property."""
-        return self._data
+        return self.__data
 
     @data.setter
     def data(self, value):
         """sets the data into a node"""
         if type(value) is not int:
             raise TypeError("data must be an integer")
-        self._data = value
+        self.__data = value
 
     @property
     def next_node(self):
         """The next_node property."""
-        return self._next_node
+        return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
         """sets the next node"""
         if value is not None or not isinstance(value, list):
             raise TypeError("next_node must be a Node object")
-        self._next_node = value
-
-
+        self.__next_node = value
