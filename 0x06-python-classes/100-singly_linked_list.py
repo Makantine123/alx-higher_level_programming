@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+
+
+class Node:
 """ Defines a class node of a singly linked list
         - def __init__(self, data, next_node=None)
     Private instance attribute data:
@@ -11,10 +14,6 @@
         -value can be node or None else raise TypeError
 
     """
-
-
-class Node:
-    """Defines class node with data and next_node"""
 
     def __init__(self, data, next_node=None):
         """Initialization of the dta node"""
