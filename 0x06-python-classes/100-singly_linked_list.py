@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Module defines a class Node"""
 
 class Node:
 """ Defines a class node of a singly linked list
