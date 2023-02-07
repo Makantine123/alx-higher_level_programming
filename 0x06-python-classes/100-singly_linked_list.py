@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module documents a class named Node"""
 
 
 class Node:
