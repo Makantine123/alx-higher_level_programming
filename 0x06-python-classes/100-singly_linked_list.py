@@ -75,24 +75,27 @@ class SinglyLinkedList:
         -def __init__(self)
     Public instance method:
         -def sorted_insert(self, value)
-    """
+      """
     def __init__(self):
-        """Initialise class"""
+         """
+        Class initializer
+        """
         self.__head = None
 
     def sorted_insert(self, value):
-        """Inserts a new node into the correct position"""
-        NewNode = Node(value)
-        temp = self.head
-        if temp is None:
-            self.head = Newnode
-            return
-        if value < temp.data:
-            NewNode.next_node = self.head
-            self.head = NewNode
-            return
-
-        while (temp.next_node and temp.next_node.data < value):
-            temp = temp.next_node
-        NewNode.next_node = temp.next_node
-        temp.next_node = NewNode
+        """
+        Inserts new Node
+        """
+        if self.__head is None:
+            self.__head = Node(value)
+        else:
+            new_node = Node(value)
+            tmp = self.__head
+            while tmp is not None:
+                if tmp.__next_node is None:
+                    tmp.__next_node = new_node
+                    new_node.__next_node = None
+                if new_node.__data < tmp.__next_node.__data:
+                    new_node.__next_node = tmp.__next_node
+                    tmp.__next_node = new_node
+                tmp = tmp.__next_node
