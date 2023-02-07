@@ -28,6 +28,7 @@ class Node:
     def data(self):
         """The data property."""
         return self._data
+
     @data.setter
     def data(self, value):
         """sets the data into a node"""
@@ -39,6 +40,7 @@ class Node:
     def next_node(self):
         """The next_node property."""
         return self._next_node
+
     @next_node.setter
     def next_node(self, value):
         """sets the next node"""
