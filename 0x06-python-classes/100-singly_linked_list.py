@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module documents a class named Node"""
+"""Module documents a class named Node """
 
 
 class Node:
@@ -22,22 +22,28 @@ class Node:
         Returns:
             None
         """
-        if type(data) is not int:
-            raise TypeError("data must be an integer")
-        if next_node is not None or not isinstance(next_node, list):
-            raise TypeError("next_node must be a Node object")
         self.__data = data
         self.__next_node = next_node
 
     @property
     def data(self):
-        """The data property."""
+        """The data property.
+        Return:
+            data
+        """
         return self.__data
 
     @data.setter
     def data(self, value):
-        """sets the data into a node"""
-        if type(value) is not int:
+        """sets the data into a node
+        Args:
+            value (int): data
+        Raises:
+            TypeError: if data is not int
+        Returns:
+            None
+        """
+        if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
