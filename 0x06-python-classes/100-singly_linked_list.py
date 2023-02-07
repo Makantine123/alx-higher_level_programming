@@ -15,7 +15,13 @@ class Node:
         -value can be node or None else raise TypeError
         """
     def __init__(self, data, next_node=None):
-        """Initialization of the dta node"""
+        """Initialization of the dta node
+        Args:
+            data (int): data
+            next_node: next_node
+        Returns:
+            None
+        """
         if type(data) is not int:
             raise TypeError("data must be an integer")
         if next_node is not None or not isinstance(next_node, list):
