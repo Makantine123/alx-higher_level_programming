@@ -20,7 +20,7 @@ class Node:
             raise TypeError("data must be an integer")
         if next_node is not None or not isinstance(next_node, list):
             raise TypeError("next_node must be a Node object")
-        slef.__data = data
+        self.__data = data
         self.__next_node = next_node
 
     @property
