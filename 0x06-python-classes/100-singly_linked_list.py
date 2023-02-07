@@ -49,12 +49,22 @@ class Node:
 
     @property
     def next_node(self):
-        """The next_node property."""
+        """The next_node property.
+        Return:
+            next_node
+        """
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        """sets the next node"""
+        """sets the next node
+        Args:
+            value: next_node
+        Raises:
+            TypeError: if next node is not node object
+        Returns:
+            None
+        """
         if value is not None or not isinstance(value, list):
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
