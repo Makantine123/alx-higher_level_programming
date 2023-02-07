@@ -47,3 +47,5 @@ class Node:
         if value is not None or not isinstance(value, list):
             raise TypeError("next_node must be a Node object")
         self._next_node = value
+
+
