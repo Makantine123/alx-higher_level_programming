@@ -9,7 +9,6 @@
         -def next_node(self)
         -def next_node(self, value)
         -value can be node or None else raise TypeError
-
     """
 
 
