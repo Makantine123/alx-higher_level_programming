@@ -11,7 +11,7 @@ class Square:
         self.size = size
         self.position = position
 
-def return_square(self):
+    def return_square(self):
         """ Returns the square to print function"""
         if (self.__size == 0):
             sqstr = ''
