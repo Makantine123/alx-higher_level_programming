@@ -60,4 +60,4 @@ class Square:
                     if (y < self.__position[0]):
                         print(" ", end="")
                     else:
-                        print("#", end=''
+                        print("#", end='')
