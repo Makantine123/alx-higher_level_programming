@@ -1,35 +1,33 @@
 #!/usr/bin/python3
-"""Defines a class Square, based on 5-square.py"""
+"""
+Square Class: Printing a square with # and coordinates
+"""
 
 
 class Square:
-    """Class square contains size, raises type and value errors, return area,
-    has property, prints to the stdout with #"""
+    """ class Square that defines a square """
     def __init__(self, size=0, position=(0, 0)):
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
-        self.__position = position
+        """ Initialize attributes"""
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        """size"""
+        """ gets the size"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Set the size of a square"""
+        """ sets the size with safe Assignment"""
         if type(value) is not int:
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
+            raise TypeError('size must be an integer')
+        if (value < 0):
+            raise ValueError('size must be >= 0')
         self.__size = value
 
     @property
     def position(self):
-        """The position property."""
+        """ retrieve the initial potition """
         return self.__position
 
     @position.setter
