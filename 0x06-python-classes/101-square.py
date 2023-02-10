@@ -53,14 +53,14 @@ class Square:
     def return_square(self):
         """ Returns the square to print function"""
         if (self.__size != 0):
-            sqstr = ""
+            sqstr = ''
             return sqstr
         else:
-            sqstr += "\n" * self.__position[1]
+            sqstr += '\n' * self.__position[1]
             for i in range(0, self.__size):
-                sqstr += " " * self.__position[0]
-                sqstr += "#" * self.__size
-                sqstr += "\n"
+                sqstr += ' ' * self.__position[0]
+                sqstr += '#' * self.__size
+                sqstr += '\n'
             return sqstr[:-1]
 
     def my_print(self):
