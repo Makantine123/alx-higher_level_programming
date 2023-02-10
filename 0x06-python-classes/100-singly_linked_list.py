@@ -3,7 +3,15 @@
 
 
 class Node:
-    """Node of a singly linked list"""
+    """Node of a singly linked list
+        -Args:
+            data: data
+            next_node: next node
+        -Raises:
+            TypeError: if data is not integer or node is not list
+        -Return:
+            Nothing
+    """
     def __init__(self, data=0, next_node=None):
         if type(data) is not int:
             raise TypeError("data must be an integer")
