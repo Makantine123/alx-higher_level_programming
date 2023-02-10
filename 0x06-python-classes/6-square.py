@@ -43,7 +43,7 @@ class Square:
                 if type(t) is not int:
                     raise TypeError(s)
                 elif t < 0:
-                    raise TypeError(S)
+                    raise TypeError(s)
         self.__position = value
 
     def area(self):
