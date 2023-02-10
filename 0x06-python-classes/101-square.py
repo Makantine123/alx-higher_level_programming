@@ -11,6 +11,19 @@ class Square:
         self.size = size
         self.position = position
 
+def return_square(self):
+        """ Returns the square to print function"""
+        if (self.__size != 0):
+            sqstr = ''
+            return sqstr
+        else:
+            sqstr += '\n' * self.__position[1]
+            for i in range(0, self.__size):
+                sqstr += ' ' * self.__position[0]
+                sqstr += '#' * self.__size
+                sqstr += '\n'
+            return sqstr[:-1]
+ 
     @property
     def size(self):
         """ gets the size"""
@@ -49,19 +62,6 @@ class Square:
     def area(self):
         """ Return the area of the square"""
         return (self.__size * self.__size)
-
-    def return_square(self):
-        """ Returns the square to print function"""
-        if (self.__size != 0):
-            sqstr = ''
-            return sqstr
-        else:
-            sqstr += '\n' * self.__position[1]
-            for i in range(0, self.__size):
-                sqstr += ' ' * self.__position[0]
-                sqstr += '#' * self.__size
-                sqstr += '\n'
-            return sqstr[:-1]
 
     def my_print(self):
         """ prints in stdout the square with the character # """
