@@ -40,7 +40,7 @@ class Square:
             raise TypeError(s)
         else:
             for t in value:
-                if (t < 0):
+                if (t < 0) or type(t) is not int:
                     raise TypeError(s)
                 elif (type(t) is not int):
                     raise TypeError(S)
