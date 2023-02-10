@@ -50,6 +50,24 @@ class Square:
         """ Return the area of the square"""
         return (self.__size * self.__size)
 
+    def return_square(self):
+        """ Returns the square to print function"""
+        if (self.size != 0):
+            sqstr = ""
+            for n in range(self.__position[1]):
+                sqstr += "\n"
+            for x in range(self.__size):
+                for y in range(self.__size + self.__position[0]):
+                    if (y < self.__position[0]):
+                        sqstr += " "
+                    else:
+                        sqstr += "#"
+                sqstr += "\n"
+            return sqstr
+        else:
+            sqstr += "\n"
+            return sqstr
+
     def my_print(self):
         """ prints in stdout the square with the character # """
         if (self.size != 0):
