@@ -13,7 +13,7 @@ class Square:
 
 def return_square(self):
         """ Returns the square to print function"""
-        if (self.__size != 0):
+        if (self.__size == 0):
             sqstr = ''
             return sqstr
         else:
