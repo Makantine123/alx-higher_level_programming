@@ -11,20 +11,6 @@ class Square:
         self.size = size
         self.position = position
 
-    def __rep__(self):
-        restr = ""
-        if self.__size == 0:
-            pass
-        else:
-            for x in range(self.__position[1]):
-                restr += "\n"
-            string = "#" * self.__size
-            margin = " " * self.__position[0]
-            restr += margin + string
-            for x in range(1, self.__size):
-                restr += "\n" + margin + string
-        return restr
-
     @property
     def size(self):
         """ gets the size"""
@@ -66,12 +52,15 @@ class Square:
 
     def my_print(self):
         """ prints in stdout the square with the character # """
-        if (self.size == 0):
-            print()
-        else:
+        if (self.size != 0):
             for n in range(self.__position[1]):
                 print("")
-                string = '#' * self.__size
-                margin = " " * self.__position[0]
             for x in range(self.__size):
-                print(margin, string, sep="")
+                for y in range(self.__size + self.__position[0]):
+                    if (y < self.__position[0]):
+                        print(" ", end="")
+                    else:
+                        print("#", end='')
+                print('')
+        else:
+            print('')
