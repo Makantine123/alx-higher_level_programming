@@ -55,9 +55,7 @@ class Square:
         if (self.size != 0):
             for n in range(self.__position[1]):
                 print("")
+                string = '#' * self.__size
+                margin = " " * self.__position[0]
             for x in range(self.__size):
-                for y in range(self.__size + self.__position[0]):
-                    if (y < self.__position[0]):
-                        print(" ", end="")
-                    else:
-                        print("#", end='')
+                print(margin, string, sep="")
