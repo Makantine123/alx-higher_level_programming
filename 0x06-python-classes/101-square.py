@@ -11,6 +11,20 @@ class Square:
         self.size = size
         self.position = position
 
+    def __rep__(self):
+        restr = ""
+        if self.__size == 0:
+            pass
+        else:
+            for x in range(self.__position[1]):
+                restr += "\n"
+            string = "#" * self.__size
+            margin = " " * self.__position[0]
+            restr += margin + string
+            for x in range(1, self.__size):
+                restr += "\n" + margin + string
+        return restr
+
     @property
     def size(self):
         """ gets the size"""
