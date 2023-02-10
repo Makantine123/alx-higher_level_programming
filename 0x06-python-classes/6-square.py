@@ -37,7 +37,7 @@ class Square:
         if type(value) is not tuple:
             raise TypeError(s)
         elif (len(value) != 2):
-                raise TypeError(s)
+            raise TypeError(s)
         else:
             for t in value:
                 if (t < 0):
