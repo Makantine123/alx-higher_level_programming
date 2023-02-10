@@ -52,21 +52,16 @@ class Square:
 
     def return_square(self):
         """ Returns the square to print function"""
-        if (self.size != 0):
+        if (self.__size != 0):
             sqstr = ""
-            for n in range(self.__position[1]):
-                sqstr += "\n"
-            for x in range(self.__size):
-                for y in range(self.__size + self.__position[0]):
-                    if (y < self.__position[0]):
-                        sqstr += " "
-                    else:
-                        sqstr += "#"
-                sqstr += "\n"
             return sqstr
         else:
-            sqstr += "\n"
-            return sqstr
+            sqstr += "\n" * self.__position[1]
+            for i in range(0, self.__size):
+                sqstr += " " * self.__position[0]
+                sqstr += "#" * self.__size
+                sqstr += "\n"
+            return sqstr[:-1]
 
     def my_print(self):
         """ prints in stdout the square with the character # """
