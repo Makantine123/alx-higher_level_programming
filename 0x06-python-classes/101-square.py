@@ -11,18 +11,21 @@ class Square:
         self.size = size
         self.position = position
 
-    def return_square(self):
+    def __return_square__(self):
         """ Returns the square to print function"""
+        sqstr = ""
         if (self.__size == 0):
-            sqstr = ''
-            return sqstr
+            pass
         else:
             sqstr += '\n' * self.__position[1]
             for i in range(0, self.__size):
-                sqstr += ' ' * self.__position[0]
-                sqstr += '#' * self.__size
                 sqstr += '\n'
-            return sqstr[:-1]
+            string = '#' * self.__size
+            margin = ' ' * self.__position
+            sqstr += margin + string
+            for x in range(1, self.__size):
+                sqstr += '\n' + margin + string
+        return sqstr[:-1]
  
     @property
     def size(self):
