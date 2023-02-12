@@ -32,7 +32,7 @@ class Square:
         """ less than comparison """
         return self.area() < other.area()
 
-    def __le__(self, other):
+    def __leer__(self, other):
         """ less than or equal than comparison """
         return self.area() <= other.area()
 
