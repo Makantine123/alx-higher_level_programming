@@ -46,10 +46,6 @@ class Square:
         """Greater than comparison"""
         return self.size > other.size
 
-    def __gteq__(self, other):
-        """Greater than equal too comparison"""
-        return self.size >= other.size
-
     def __lt__(self, other):
         """Less than equal comparison"""
         return self.size < other.size
