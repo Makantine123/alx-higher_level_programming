@@ -33,7 +33,7 @@ class Square:
         """ less than comparison """
         return self.area() < other.area()
 
-    def __leq__(self, other):
+    def __lq__(self, other):
         """ less than or equal than comparison """
         return self.area() <= other.area()
 
@@ -41,7 +41,7 @@ class Square:
         """ equal to comparison """
         return self.area() == other.area()
 
-    def __neq__(self, other):
+    def __nq__(self, other):
         """ not equal comparison """
         return self.area() != other.area()
 
@@ -49,6 +49,6 @@ class Square:
         """ greater than """
         return self.area() > other.area()
 
-    def __geq__(self, other):
+    def __gq__(self, other):
         """ greater than or equal to """
         return self.area() >= other.area()
