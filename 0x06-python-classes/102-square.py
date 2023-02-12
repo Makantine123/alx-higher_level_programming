@@ -30,26 +30,26 @@ class Square:
         """Area"""
         return (self.__size * self.__size)
 
+    def __lteq__(self, other):
+        """Less than equal too comparison"""
+        return self.size <= other.size
+
     def __eq__(self, other):
         """Equal to comparison"""
-        return self.area() == other.area()
+        return self.size == other.size
 
     def __nteq__(self, other):
         """Not Equal to comparison"""
-        return self.area() != other.area()
+        return self.size != other.size
 
     def __gt__(self, other):
         """Greater than comparison"""
-        return self.area() > other.area()
+        return self.size > other.size
 
     def __gteq__(self, other):
         """Greater than equal too comparison"""
-        return self.area() >= other.area()
+        return self.size >= other.size
 
     def __lt__(self, other):
-        """Less than comparison"""
-        return self.area() < other.area()
-
-    def __lteq__(self, other):
-        """Less than equal too comparison"""
-        return self.area() <= other.area()
+        """Less than equal comparison"""
+        return self.size < other.size
