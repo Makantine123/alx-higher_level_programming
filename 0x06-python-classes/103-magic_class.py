@@ -14,7 +14,7 @@ class MagicClass:
 
     def area(self):
         """Area"""
-        return self._MagicClass_radius ** 2 * math.pi
+        return ((self._MagicClass_radius ** 2) * math.pi)
 
     def circumference(self):
         """Circumference"""
