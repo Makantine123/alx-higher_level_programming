@@ -50,4 +50,5 @@ try:
 except (ValueErr, TypeError):
     print("N must be a number")
     exit()
+
 nqueens(size)
