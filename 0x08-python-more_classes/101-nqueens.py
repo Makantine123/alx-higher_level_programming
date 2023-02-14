@@ -44,11 +44,12 @@ def calcs(queen):
 
 if len(sys.argv) != 2:
     print("Usage: nqueens N")
-    exit()
+    sys.exit(1)
+
 try:
     size = int(sys.argv[1])
 except (ValueErr, TypeError):
     print("N must be a number")
-    exit()
+    sys.exit(1)
 
 nqueens(size)
