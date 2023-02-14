@@ -1,0 +1,24 @@
+=======================================
+ Tests for the 0-add_integer.py script
+=======================================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> print(add_integer(1, 2))
+3
+>>> print(add_integer(100, -2))
+98
+>>> print(add_integer(10))
+108
+>>> print(add_integer(3.14, 8))
+11
+>>> print(add_integer(3.14))
+101
+>>> print(add_integer(3.14, -3.14))
+0
+>>> print(add_integer(0))
+98
+>>> print(add_integer(0, 0))
+0
+>>> print(add_integer(-100, 0))
+-100
