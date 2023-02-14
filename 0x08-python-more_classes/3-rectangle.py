@@ -63,4 +63,4 @@ class Rectangle:
                     rect += "#"
                 if x < self.height - 1:
                     rect += "\n"
-            return rect[:-1]
+            return rect
