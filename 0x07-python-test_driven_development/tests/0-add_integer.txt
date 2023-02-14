@@ -22,3 +22,17 @@
 0
 >>> print(add_integer(-100, 0))
 -100
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> print(add_integer(10, None))
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> print(add_integer(None, None))
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> print(add_integer("hi", 10))
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> print(add_integer(30, [10, 20]))
+Traceback (most recent call last):
+TypeError: b must be an integer
