@@ -3,42 +3,23 @@
 
 >>> matrix_divided = __import__('2-matrix_divided.py').matrix_divided
 
->>> print(matrix_divided(1, 2))
-3
->>> print(matrix_divided(100, -2))
-98
->>> print(matrix_divided(10))
-108
->>> print(matrix_divided(3.14, 8))
-11
->>> print(matrix_divided(3.14))
-101
->>> print(matrix_divided(3.14, -3.14))
-0
->>> print(matrix_divided(0))
-98
->>> print(matrix_divided(0, 0))
-0
->>> print(matrix_divided(-100, 0))
--100
->>> print(matrix_divided(None))
+>>> print(matrix_divided([[1, 2, 3],[4, 5, 6]], 2))
+[[0.5, 1.0, 1.5],[2.0, 2.5, 3.0]]
+>>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 2))
+[[0.5, -1.0, 1.5],[-2.0, 2.5, 3.0]]
+>>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 0))
 Traceback (most recent call last):
-TypeError: a must be an integer
->>> print(matrix_divided(10, None))
+ZeroDivisionError: division by zero
+>>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 0))
 Traceback (most recent call last):
-TypeError: b must be an integer
->>> print(matrix_divided(None, None))
+ZeroDivisionError: division by zero
+>>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 0))
 Traceback (most recent call last):
-TypeError: a must be an integer
->>> print(matrix_divided("hi", 10))
+ZeroDivisionError: division by zero
+>>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 0))
 Traceback (most recent call last):
-TypeError: a must be an integer
->>> print(matrix_divided(30, [10, 20]))
+ZeroDivisionError: division by zero
+>>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 0))
 Traceback (most recent call last):
-TypeError: b must be an integer
->>> print(matrix_divided(float('inf')))
-Traceback (most recent call last):
-OverflowError: cannot convert float infinity to integer
->>> print(matrix_divided(float('NaN')))
-Traceback (most recent call last):
-ValueError: cannot convert float NaN to integer
+ZeroDivisionError: division by zero
+
