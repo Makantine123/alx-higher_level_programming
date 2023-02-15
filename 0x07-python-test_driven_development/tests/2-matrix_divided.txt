@@ -21,3 +21,24 @@
 0
 >>> print(matrix_divided(-100, 0))
 -100
+>>> print(matrix_divided(None))
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> print(matrix_divided(10, None))
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> print(matrix_divided(None, None))
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> print(matrix_divided("hi", 10))
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> print(matrix_divided(30, [10, 20]))
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> print(matrix_divided(float('inf')))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+>>> print(matrix_divided(float('NaN')))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
