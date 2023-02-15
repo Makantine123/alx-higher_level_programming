@@ -3,11 +3,17 @@
 
 >>> matrix_divided = __import__('2-matrix_divided.py').matrix_divided
 
->>> print(matrix_divided([[1, 2, 3],[4, 5, 6]], 2))
-[[0.5, 1.0, 1.5],[2.0, 2.5, 3.0]]
+>>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], 2))
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
 
->>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 2))
-[[0.5, -1.0, 1.5],[-2.0, 2.5, 3.0]]
+>>> print(matrix_divided([[1, -2, 3], [-4, 5, 6]], 2))
+[[0.5, -1.0, 1.5], [-2.0, 2.5, 3.0]]
+
+>>> print(matrix_divided([[5]], 5))
+[[1]]
+
+>>> print(matrix_divided([[5,10,25], [10, 5, 30]], -5))
+[[-1, -2, -5], [-2, -1, -6]]
 
 >>> print(matrix_divided([[5]], 5))
 [[1]]
