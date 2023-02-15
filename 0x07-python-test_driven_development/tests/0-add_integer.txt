@@ -38,7 +38,7 @@ Traceback (most recent call last):
 TypeError: b must be an integer
 >>> print(add_integer(float('inf')))
 Traceback (most recent call last):
-TypeError: b must be an integer
+OverflowError: cannot convert float infinity to integer
 >>> print(add_integer(float('NaN')))
 Traceback (most recent call last):
-TypeError: cannot convert float NaN to integer
+ValueError: cannot convert float NaN to integer
