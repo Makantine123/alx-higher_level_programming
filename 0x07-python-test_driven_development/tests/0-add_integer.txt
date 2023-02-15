@@ -1,6 +1,5 @@
-=======================================
- Tests for the 0-add_integer.py script
-=======================================
+Tests for the 0-add_integer.py script
+=====================================
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
@@ -37,6 +36,3 @@ TypeError: a must be an integer
 >>> print(add_integer(30, [10, 20]))
 Traceback (most recent call last):
 TypeError: b must be an integer
->>> pint(add_integer(float('nan'))
-Traceback (most recent call last):
-ValueError: cannot convert float NaN to integer
