@@ -37,9 +37,6 @@ TypeError: a must be an integer
 >>> print(add_integer(30, [10, 20]))
 Traceback (most recent call last):
 TypeError: b must be an integer
->>> print(add_integer(float('inf'))
-Traceback (most recent call last):
-TypeError: b must be an integer
 >>> pint(add_integer(float('nan'))
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
