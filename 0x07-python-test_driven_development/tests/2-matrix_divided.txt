@@ -3,10 +3,12 @@
 
 >>> matrix_divided = __import__('2-matrix_divided.py').matrix_divided
 
->>> print(matrix_divided([[1, 2, 3],[4, 5, 6]], 2), matrix, sep='\n')
+>>> print(matrix_divided([[1, 2, 3],[4, 5, 6]], 2))
 [[0.5, 1.0, 1.5],[2.0, 2.5, 3.0]]
->>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 2), matrix, sep='\n')
+
+>>> print(matrix_divided([[1, -2, 3],[-4, 5, 6]], 2))
 [[0.5, -1.0, 1.5],[-2.0, 2.5, 3.0]]
->>> print(matrix_divided([[5]], 5), matrix, sep='\n')
+
+>>> print(matrix_divided([[5]], 5))
 [[1]]
 
