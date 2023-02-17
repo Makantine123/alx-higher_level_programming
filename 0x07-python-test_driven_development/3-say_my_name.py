@@ -3,7 +3,7 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """ Function Prints name 
+    """ Function Prints name
         Args:
             fist_name: fisrt name
             last_name: last_name
