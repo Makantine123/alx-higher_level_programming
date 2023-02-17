@@ -15,8 +15,4 @@ def say_my_name(fist_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a sting")
 
-    nstr = ""
-    if last_name == "":
-        print("My name is {:s}".format(fisrt_name))
-    else:
-        print("My name is {:s} {:s}".format(fisrt_name, last_name))
+    print("My name is {:s} {:s}".format(fisrt_name, last_name))
