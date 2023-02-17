@@ -2,7 +2,7 @@
 """ Module contains function that prints a square """
 
 
-def print_square(size=10):
+def print_square(size):
     """Function prints a square with character #"""
     if isinstance(size, float) and size < 0:
         raise TypeError("size must be an integer")
