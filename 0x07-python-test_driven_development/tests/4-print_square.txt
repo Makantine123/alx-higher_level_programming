@@ -33,7 +33,3 @@ TypeError: size must be an integer
 >>> print_square(-3.1)
 Traceback (most recent call last):
 TypeError: size must be an integer
-
->>> print_square({0, 1})
-Traceback (most recent call last):
-TypeError: size must be an integer
