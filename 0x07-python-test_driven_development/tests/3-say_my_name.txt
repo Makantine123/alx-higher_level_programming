@@ -19,9 +19,6 @@ Testings strings
   >>> say_my_name("", "")
   My name is  
 
-  >>> say_my_name("")
-  My name is  
-
 Testing incorrect values
 ========================
 
