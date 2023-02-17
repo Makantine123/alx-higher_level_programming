@@ -2,7 +2,7 @@
 """ Module contains function that prints name """
 
 
-def say_my_name(fist_name, last_name=""):
+def say_my_name(first_name, last_name=""):
     """ Function Prints name 
         Args:
             fist_name: fisrt name
