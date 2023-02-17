@@ -17,7 +17,7 @@ Testings strings
   My name is John 
 
   >>> say_my_name("")
-  My name is 
+  My name is
 
 
 
