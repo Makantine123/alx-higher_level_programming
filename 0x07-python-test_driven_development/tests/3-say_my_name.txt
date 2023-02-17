@@ -5,10 +5,17 @@ Import module and function
 
   >>> say_my_name = __import__("3-say_my_name.py").say_my_name
 
-Strings
+Testings strings
+================
+
   >>> say_my_name("John", "Smith")
   My name is John Smith
 
   >>> say_my_name("John")
   My name is John
 
+  >>> say_my_name("", "")
+  My name is
+
+  >>> say_my_name("")
+  My name is
