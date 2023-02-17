@@ -1,11 +1,11 @@
- Tests for the 2-matrix_divided.py script
+==========================================
+  Tests for the 3-say_my_name.py script
 ==========================================
 
 
 Import module and function
 
-  >>> say_my_name = __import__("3-say_my_name").say_my_name
-
+  >>> say_my_name = __import__("3-say_my_name.py").say_my_name
 
 Testings strings
 ================
