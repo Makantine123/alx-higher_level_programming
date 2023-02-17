@@ -17,6 +17,6 @@ def say_my_name(fist_name, last_name=""):
 
     nstr = ""
     if last_name == "":
-        print("My name is {}".format(fisrt_name))
+        print("My name is {:s}".format(fisrt_name))
     else:
-        print("My name is {} {}".format(fisrt_name, last_name))
+        print("My name is {:s} {:s}".format(fisrt_name, last_name))
