@@ -19,7 +19,7 @@ My name is
 >>> say_my_name("", "")
 My name is  
 
->>> say_my_name(,)
+>>> say_my_name()
 
 
 >>> say_my_name({0, 1})
