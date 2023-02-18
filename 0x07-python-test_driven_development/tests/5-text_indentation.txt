@@ -1,7 +1,7 @@
 Test cases for 5-text_indentation.py
 ====================================
 
->>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation = __import__("5-text_indentation.py").text_indentation
 
 >>> text_indentation("Hello")
 Hello
