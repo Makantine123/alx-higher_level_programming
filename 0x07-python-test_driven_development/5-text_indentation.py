@@ -14,14 +14,14 @@ def text_indentation(text):
 
     for i in range(len(text)):
         if flag == 1:
-            if text[i + 1] != " ":
+            if text[i + 1] != " " and i < len(text):
                 flag = 0
             continue
         if text[i] in [".", "?", ":"]:
             print(text[i], end="")
             print("")
             print("")
-            if text[i + 1] == " ":
+            if text[i + 1] == " " and i < len(text):
                 flag = 1
         else:
             print(text[i], end="")
