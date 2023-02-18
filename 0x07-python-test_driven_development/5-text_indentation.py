@@ -25,6 +25,6 @@ def text_indentation(text):
 
             if i < len(text):
                 if text[i + 1] == " ":
-                flag = 1
+                    flag = 1
         else:
             print(text[i], end="")
