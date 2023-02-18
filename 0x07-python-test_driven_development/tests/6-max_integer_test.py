@@ -43,15 +43,5 @@ class TestMaxInteger(unittest.TestCase):
         listy = [1, 1, 1, 1, 1]
         self.assertEqual(max_integer(listy), 1)
 
-    def test_all_same_values(self):
-        """Test a list of positive numbers"""
-        listy = [-1, -1, -1, -1, -1]
-        self.assertEqual(max_integer(listy), -1)
-
-    def test_all_same_values(self):
-        """Test a list of positive numbers"""
-        listy = [1, 1, 1, 1, 1]
-        self.assertEqual(max_integer(listy), 1)
-
 if __name__ == "__main__":
     unittest.main()
