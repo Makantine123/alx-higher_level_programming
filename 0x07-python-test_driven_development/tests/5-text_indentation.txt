@@ -49,4 +49,14 @@ Hiya.
 >>> text_indentation(4)
 Traceback (most recent call last):
 ...
-TypeError : text must be a string
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(-4)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
