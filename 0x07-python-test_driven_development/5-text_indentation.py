@@ -3,15 +3,15 @@
 
 
 def text_indentation(text):
-    """ 
+    """
     Function prints a text with 2 new lines after each of these characters
     . , ? , :
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
+
     flag = 0
-    
+
     for i in range(len(text)):
         if flag == 1:
             flag = 0
