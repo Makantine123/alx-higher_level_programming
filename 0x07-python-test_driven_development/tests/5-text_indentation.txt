@@ -45,3 +45,8 @@ Hello?
 <BLANKLINE>
 Hiya.
 <BLANKLINE>
+
+>>> text_indentation(4)
+Traceback (most recent call last)
+...
+TypeError : text must be a string
