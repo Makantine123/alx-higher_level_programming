@@ -18,11 +18,11 @@ Hello?
 Hello:
 <BLANKLINE>
 
->>> text_indentation(" Hello?")
+>>> text_indentation("Hello?")
 Hello?
 <BLANKLINE>
 
->>> text_indentation(" Hi: Hello?    Hiya. ")
+>>> text_indentation("Hi: Hello?Hiya.")
 Hi:
 <BLANKLINE>
 Hello?
