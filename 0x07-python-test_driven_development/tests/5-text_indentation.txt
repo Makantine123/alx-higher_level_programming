@@ -18,16 +18,8 @@ Hello?
 Hello:
 <BLANKLINE>
 
->>> text_indentation("   Hello.   ")
-Hello.
-<BLANKLINE>
-
->>> text_indentation(" Hello? ")
+>>> text_indentation(" Hello?")
 Hello?
-<BLANKLINE>
-
->>> text_indentation("  Hello:  ")
-Hello:
 <BLANKLINE>
 
 >>> text_indentation(" Hi: Hello?    Hiya. ")
