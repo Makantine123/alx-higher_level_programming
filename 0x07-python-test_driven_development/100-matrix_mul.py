@@ -1,44 +1,41 @@
 #!/usr/bin/python3
-""" Module contain function which prints text """
+"""Module that contains a function to divide a matrix by a scalar"""
 
 
 def matrix_mul(m_a, m_b):
-    """
-    Function that multiplies 2 matrices
-    """
-    if not isinstance(m_a, list):
+    """Multiplies two matrices"""
+    if type(m_a) is not list:
         raise TypeError("m_a must be a list")
-    if not isinstance(m_b, list):
+    if type(m_b) is not list:
         raise TypeError("m_b must be a list")
-    if m_a == [] or m_a == [[]]:
-        raise ValueError("m_a can't be empty")
-    if m_b == [] or m_b == [[]]:
-        raise ValueError("m_b can't be empty")
-
-    for i in m_a:
-        if not isinstance(i, list):
+    for x in m_a:
+        if type(x) is not list:
             raise TypeError("m_a must be a list of lists")
-    for i in m_b:
-        if not isinstance(i, list):
+    for x in m_b:
+        if type(x) is not list:
             raise TypeError("m_b must be a list of lists")
-
+    if len(m_a) < 1:
+        raise ValueError("m_a can't be empty")
+    if len(m_b) < 1:
+        raise ValueError("m_b can't be empty")
     arowlen = len(m_a[0])
+    if arowlen < 1:
+        raise ValueError("m_a can't be empty")
     browlen = len(m_b[0])
-
+    if browlen < 1:
+        raise ValueError("m_b can't be empty")
     for row in m_a:
         if len(row) != arowlen:
             raise TypeError("each row of m_a must should be of the same size")
         for col in row:
-            if isinstance(col, (float, int)):
+            if type(col) is not float and type(col) is not int:
                 raise TypeError("m_a should contain only integers or floats")
-
     for row in m_b:
         if len(row) != browlen:
             raise TypeError("each row of m_b must should be of the same size")
         for col in row:
-            if isinstance(col, (float, int)):
+            if type(col) is not float and type(col) is not int:
                 raise TypeError("m_b should contain only integers or floats")
-
     if arowlen != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     newmatrix = []
