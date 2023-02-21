@@ -26,13 +26,13 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_b can't be empty")
     for row in m_a:
         if len(row) != arowlen:
-            raise TypeError("each row of m_a should be of the same size")
+            raise TypeError("each row of m_a must be of the same size")
         for col in row:
             if type(col) is not float and type(col) is not int:
                 raise TypeError("m_a should contain only integers or floats")
     for row in m_b:
         if len(row) != browlen:
-            raise TypeError("each row of m_b must should be of the same size")
+            raise TypeError("each row of m_b must be of the same size")
         for col in row:
             if type(col) is not float and type(col) is not int:
                 raise TypeError("m_b should contain only integers or floats")
