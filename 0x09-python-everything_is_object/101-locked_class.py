@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Module containing a class with locked down attributes"""
+"""
+Locked Class
+"""
+
 
 class LockedClass:
-    """Class with locked down attributes. Can only add first_name"""
+    """ Prevent user to create new attributes """
+    __slots__ = ['first_name']
 
-    def __setattr__(self, name, value):
-        if name != "first_name":
-            raise AttributeError("'LockedClass' object has no attribute 'last_name'")
-        else:
-            self.__dict__[name] = value
+    def __init__(self, first_n=""):
+        self.first_name = first_n
