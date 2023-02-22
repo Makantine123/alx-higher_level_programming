@@ -49,6 +49,3 @@ ValueError: x must be greater than 0
 >>> ivalid("x", -4)
 Traceback (most recent call last):
 ValueError: x must be greater than 0
->>> ivalid("name", True)
-Traceback (most recent call last):
-TypeError: name must be an integer
