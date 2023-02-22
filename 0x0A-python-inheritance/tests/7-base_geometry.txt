@@ -1,7 +1,7 @@
 Doctest cases for 0x0A-7: integer validator
 -------------------------------------------
 
->>> BaseG = __import__("7-base_geometry").BaseGeometry
+>>> BaseG = __import__("7-base_geometry.py").BaseGeometry
 >>> a = BaseG()
 >>> ivalid = a.integer_validator
 
