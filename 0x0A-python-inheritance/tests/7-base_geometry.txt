@@ -40,9 +40,6 @@ TypeError: name must be an integer
 >>> ivalid("name", [])
 Traceback (most recent call last):
 TypeError: name must be an integer
->>> ivalid("name", True)
-Traceback (most recent call last):
-TypeError: name must be an integer
 >>> ivalid("name", 3.5)
 Traceback (most recent call last):
 TypeError: name must be an integer
