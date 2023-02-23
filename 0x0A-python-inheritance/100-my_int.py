@@ -10,4 +10,4 @@ class MyInt(int):
 
     def __ne__(self, other):
         """ Not Equal Operator """
-        return False
+        return True
