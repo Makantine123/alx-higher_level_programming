@@ -3,7 +3,7 @@
 
 
 def add_attribute(obj, att, value):
-    """ functions attempts to add a new attribut to object 
+    """ functions attempts to add a new attribut to object
         Args:
             obj: Object Name
             att: Attribute Name
