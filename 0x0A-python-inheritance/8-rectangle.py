@@ -8,6 +8,7 @@ BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 """ Program that creates a Rectangle and instance its values """
 
+
 class Rectangle(BaseGeometry):
     """Class Rectangle, inherits from BaseGeometry"""
     def __init__(self, width, height):
