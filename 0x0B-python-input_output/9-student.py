@@ -7,15 +7,9 @@ def __init__(self, first_name, last_name, age):
     self.last_name = last_name
     self.age = age
 
-def to_json(self, atts=None):
+def to_json(self):
     """
     Retrieves a dictionary representation of a Student instance
     (same as 8-class_to_json.py)
     """
-    resdict = dict()
-    if type(atts) is list:
-        for x in atts:
-            if x in self.__dict__:
-                resdict.update({x: self.__dict__[x]})
-        return resdict
-    return self.__dict__.copy()
+    return self.__dict__
