@@ -25,6 +25,4 @@ class Student:
         of a Student instance.
         Returns: the dict representation of the instance.
         """
-
-        return self.__dict__
-    
+        return self.__dict__ 
