@@ -1,17 +1,14 @@
 #!/usr/bin/python3
-"""
-Script that loads, adds and save all arguments to a Python list
-,then saves them to a file
-"""
+"""Makes a list from args and saves them to a file in json format"""
 import sys
-
-savefile = __import__("5-save_to_json_file.py").save_to_json_file
-loadfile = __import__("6-load_from_json_file.py").load_from_json_file
+import json
+savejson = __import__("7-save_to_json_file").save_to_json_file
+loadjson = __import__("8-load_from_json_file").load_from_json_file
 
 try:
-    listn = loadfile("add_item.json")
+    listy = loadjson("add_item.json")
 except FileNotFoundError:
-    listn = []
-for i in sys.argv[1]:
-    listn.append(i)
-savefile(listn, "add_item.json")
+    listy = []
+for arg in sys.argv[1:]:
+    listy.append(arg)
+savejson(listy, "add_item.json")
