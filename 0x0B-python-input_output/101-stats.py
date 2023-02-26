@@ -1,38 +1,19 @@
 #!/usr/bin/python3
-import sys
+"""
+Module for append_after method.
+"""
 
 
-def print_status():
-    '''
-        Printing the status of the request
-    '''
-    counter = 0
-    size = 0
-    file_size = 0
-    status_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
-                    "403": 0, "404": 0, "405": 0, "500": 0}
-
-    for l in sys.stdin:
-        line = l.split()
-        try:
-            size += int(line[-1])
-            code = line[-2]
-            status_codes[code] += 1
-        except:
-            continue
-        if counter == 9:
-            print("File size: {}".format(size))
-            for key, val in sorted(status_codes.items()):
-                if (val != 0):
-                    print("{}: {}".format(key, val))
-            counter = 0
-        counter += 1
-    if counter < 9:
-        print("File size: {}".format(size))
-        for key, val in sorted(status_codes.items()):
-            if (val != 0):
-                print("{}: {}".format(key, val))
-
-
-if __name__ == "__main__":
-    print_status()
+def append_after(filename="", search_string="", new_string=""):
+    '''Method for inserting text after search string.'''
+    lines = []
+    with open(filename, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+        i = 0
+        while i < len(lines):
+            if search_string in lines[i]:
+                lines[i:i + 1] = [lines[i], new_string]
+                i += 1
+            i += 1
+    with open(filename, "w", encoding="utf-8") as f:
+        f.writelines(lines)
