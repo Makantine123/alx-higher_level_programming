@@ -10,7 +10,7 @@ def __init__(self, first_name, last_name, age):
 def to_json(self):
     """Retrieves a dictionary representation of a Student instance
     (same as 8-class_to_json.py)"""
-    resdict = {}
+    resdict = dict()
     objdict = self.__dict__
     for el in objdict:
         if type(objdict[el]) in [list, dict, str, int, bool]:
