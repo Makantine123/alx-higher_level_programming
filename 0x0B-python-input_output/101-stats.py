@@ -1,19 +1,24 @@
 #!/usr/bin/python3
-"""
-Module for append_after method.
-"""
+import sys
 
 
-def append_after(filename="", search_string="", new_string=""):
-    '''Method for inserting text after search string.'''
-    lines = []
-    with open(filename, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-        i = 0
-        while i < len(lines):
-            if search_string in lines[i]:
-                lines[i:i + 1] = [lines[i], new_string]
-                i += 1
-            i += 1
-    with open(filename, "w", encoding="utf-8") as f:
-        f.writelines(lines)
+codes = {}
+totalsize = 0
+linesread = 0
+try:
+    for line in sys.stdin:
+        line = line.split(" ")
+        if line[-2] in codes:
+            codes[line[-2]] += 1
+        else:
+            codes[line[-2]] = 1
+        totalsize += int(line[-1])
+        linesread += 1
+        if linesread % 10 == 0:
+            print("File size:", totalsize)
+            for code in sorted(list(codes)):
+                print("{}: {}".format(code, codes[code]))
+finally:
+    print("File size:", totalsize)
+    for code in sorted(list(codes)):
+        print("{}: {}".format(code, codes[code]))
