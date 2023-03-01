@@ -86,6 +86,10 @@ class Rectangle(Base):
         ht = self.height
 
         for i in range(ht):
+            for h in range(self.y):
+                print()
+            for l in range(sel.x):
+                print(" ", end="")
             for k in range(wd):
                 print("#", end="")
             print()
