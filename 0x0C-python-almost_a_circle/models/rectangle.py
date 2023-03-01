@@ -85,14 +85,11 @@ class Rectangle(Base):
         wd = self.width
         ht = self.height
 
-        for i in range(ht):
-            for h in range(self.y):
-                print()
-            for l in range(sel.x):
-                print(" ", end="")
-            for k in range(wd):
-                print("#", end="")
+        for y in range(self.y):
             print()
+        for h in range(ht):
+            print(" " * self.x, end="")
+            print("#" * wd)
 
     def __str__(self):
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".\
