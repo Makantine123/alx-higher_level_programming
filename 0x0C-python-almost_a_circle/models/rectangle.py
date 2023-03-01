@@ -2,9 +2,10 @@
 """Rectangle Module, inherits from Base"""
 
 
-Base = __import__("base").Base
+Base = __import__("base.py").Base
 
 """ Base Class from base.py """
+
 
 class Rectangle(Base):
     """ Rectangle class that inherits from Base """
