@@ -118,4 +118,4 @@ class Rectangle(Base):
                 self.y = args[4]
         else:
             for key, value in kwargs.items():
-                self.key = value
+                exec("self.{} = {}".format(key, value))
