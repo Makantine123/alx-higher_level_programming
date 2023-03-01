@@ -4,7 +4,7 @@
 
 class Base:
     """ Base class, is the base of all other classess in project"""
-    
+
     __nb_objects = 0
 
     def __init__(self, id=None):
