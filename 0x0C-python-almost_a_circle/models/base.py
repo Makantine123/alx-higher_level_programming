@@ -42,7 +42,7 @@ class Base:
         filename = cls.__name__ + '.json'
         if (list_objs is not None):
             for ins in list_objs:
-                item = item.to_dictionary()
+                ins = ins.to_dictionary()
                 json_dict = json.loads(cls.to_json_string(item))
                 mylist.append(json_dict)
         with open(filename, "w") as f:
