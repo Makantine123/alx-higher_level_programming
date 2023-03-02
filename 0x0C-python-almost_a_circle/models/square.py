@@ -19,7 +19,6 @@ class Square(Rectangle):
         Returns:
             None
         """
-        self.size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
