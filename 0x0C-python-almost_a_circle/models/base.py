@@ -43,7 +43,7 @@ class Base:
         if (list_objs is not None):
             for ins in list_objs:
                 ins = ins.to_dictionary()
-                json_dict = json.loads(cls.to_json_string(item))
+                json_dict = json.loads(cls.to_json_string(ins))
                 mylist.append(json_dict)
         with open(filename, "w") as f:
             json.dump(mylist, f)
