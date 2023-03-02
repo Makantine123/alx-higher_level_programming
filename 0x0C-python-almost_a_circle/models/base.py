@@ -38,7 +38,7 @@ class Base:
         Args:
             list_objs: List of an instance who inherits of Base
         """
-        if list_objs is None:
+        if list_objs is None or list_objs == []:
             jstr = "[]"
         else:
             jstr = cls.to_json_string([o.to_dictionary() for o in list_objs])
