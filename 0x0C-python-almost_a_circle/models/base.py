@@ -3,6 +3,7 @@
 
 import json
 
+
 class Base:
     """ Base class, is the base of all other classess in project"""
 
