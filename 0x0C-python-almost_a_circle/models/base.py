@@ -38,10 +38,11 @@ class Base:
         Args:
             list_objs: List of an instance who inherits of Base
         """
-        if list_objs is None or list_objs == []:
-            jstr = "[]"
-        else:
-            jstr = cls.to_json_string([o.to_dictionary() for o in list_objs])
-        filen = cls.__name__ + ".json"
+        mylist = []
+        filename = cls.__name__ + '.json'
+        if (list_objs is not None):
+            for ins in list_objs:
+                my_list.append(ins.to_dictionary())
+        jstr = cls.to_json_string(my_list)
         with open(filename, "w") as myfile:
             myfile.write(jstr)
