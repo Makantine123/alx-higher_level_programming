@@ -20,7 +20,7 @@ class Square(Rectangle):
             None
         """
         self.size = size
-        super().__init__(size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".\
