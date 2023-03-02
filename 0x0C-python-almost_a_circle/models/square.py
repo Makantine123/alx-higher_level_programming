@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module containing Square class the inherits from Rectangle"""
 from models.base import Base
-from models.base import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -33,5 +33,6 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
+        """Sets the size attribute"""
         self.__width = value
         self.__height = value
