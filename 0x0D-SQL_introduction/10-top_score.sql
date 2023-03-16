@@ -1,2 +1,2 @@
 -- list reconds of second table
-SELECT SCORE, NAME FROM second_table ORDER SCORE DESC
+SELECT score, name FROM second_table ORDER BY score DESC
