@@ -1,5 +1,4 @@
 -- List Cities that can be found in database
-SELECT states.id, cities.name
-FROM states join cities on
-(states.id = cities.state_id)
-ORDER BY cities.id ASC;
+SELECT c.id, c.name FROM cities AS c, states AS s
+       WHERE c.state_id=s.id AND s.name = "California"
+       ORDER BY c.id ASC;
