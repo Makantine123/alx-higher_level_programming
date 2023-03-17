@@ -1,4 +1,4 @@
---lsts all shows, and all genres linked to that show, from the database hbtn_0d_tvshows
+-- lsts all shows, and all genres linked to that show, from the database hbtn_0d_tvshows
 -- Script
 SELECT sh.title, gr.name FROM tv_shows AS sh
 	LEFT JOIN tv_show_genres AS shgr
