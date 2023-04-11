@@ -6,7 +6,7 @@ let shape = '#';
 if (!Number.isInteger(sqs)) {
   console.log('Missing size');
 } else {
-  for (let v = 0; v < sqs; v++) {
+  for (let v = 1; v < sqs; v++) {
     shape = shape + '#';
   }
 
