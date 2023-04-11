@@ -9,6 +9,7 @@ if (!Number.isInteger(sqs)) {
   for (let v = 1; v < sqs; v++) {
     shape = shape + '#';
   }
+  shape = shape.trim();
 
   for (let i = 0; i < sqs; i++) {
     console.log(shape);
