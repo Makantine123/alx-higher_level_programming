@@ -3,10 +3,10 @@
 Script that prints all City objects from the database hbtn_0e_14_usa
 """
 
+
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sys import argv
-
 from model_state import Base, State
 from model_city import City
 
@@ -17,6 +17,7 @@ if __name__ == "__main__":
                                   argv[3]),
                            pool_pre_ping=True)
 
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -25,6 +26,6 @@ if __name__ == "__main__":
         order_by(City.id)
 
     for row in result.all():
-        print("{:s}: ({:d}) {:s}".format(row[0], row[1], row[2]))
+        print("{}: ({}) {}".format(row[0], row[1], row[2]))
 
     session.close()
