@@ -26,3 +26,5 @@ if __name__ == "__main__":
 
     for row in result.all():
         print("{:s}: ({:d}) {:s}".format(row[0], row[1], row[2]))
+
+    session.close()
