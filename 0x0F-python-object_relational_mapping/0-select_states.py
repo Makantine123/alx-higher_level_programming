@@ -17,4 +17,4 @@ if __name__ == "__main__":
     result.execute("SELECT id, name FROM states ORDER BY id ASC")
 
     for row in result.fetchall():
-        print("({}, {})".format(row[0], row[1]))
+        print("({}, '{}')".format(row[0], row[1]))
