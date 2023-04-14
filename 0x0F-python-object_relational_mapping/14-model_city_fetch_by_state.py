@@ -5,6 +5,7 @@ Script that prints all City objects from the database hbtn_0e_14_usa
 
 if __name__ == "__main__":
     import MySQLdb
+    from model_state import Base, State
     from sys import argv
 
     db = MySQLdb.connect(host="localhost",
