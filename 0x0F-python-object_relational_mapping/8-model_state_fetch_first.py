@@ -16,8 +16,8 @@ if __name__ == "__main__":
     session = Session()
 
     result = session.query(State).first()
-
-    if (result.count() == 0):
+    
+    if (result.id == ""):
         print("Nothing")
     else:
         print("{}: {}".format(result.id, result.name))
