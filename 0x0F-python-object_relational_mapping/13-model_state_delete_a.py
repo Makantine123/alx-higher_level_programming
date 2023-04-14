@@ -15,13 +15,14 @@ if __name__ == "__main__":
                                   argv[3]),
                            pool_pre_ping=True)
 
-    Base.metadata.create_all(engine)
-
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).filter(State.name.like('%a%'))\
-        .delete()
+    result = session.query(State).filter(State.name.like('%a%')).all()
+
+    for record in result:
+        session.delete(record)
 
     session.commit()
+
     session.close()
