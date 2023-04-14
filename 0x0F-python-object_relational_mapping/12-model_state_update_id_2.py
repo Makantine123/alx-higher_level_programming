@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Script changes the name of state object from thd database"""
+
 
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
