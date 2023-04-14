@@ -15,4 +15,4 @@ if __name__ == "__main__":
     JOIN states s on s.id=c.state_id ORDER BY c.state_id""")
 
     for row in result.fetchall():
-        print("({}, {}, {})".format(row[0], row[1], row[2]))
+        print("({}, '{}', '{}')".format(row[0], row[1], row[2]))
