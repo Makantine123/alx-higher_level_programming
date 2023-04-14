@@ -14,9 +14,9 @@ if __name__ == "__main__":
                          password=argv[2],
                          db=argv[3])
     result = db.cursor()
-    result.execute("""SELECT * FROM states
+    result.execute("""SELECT id, name FROM states
                    WHERE (LEFT(name,1) = 'N') AND
                    (ASCII(LEFT(name,1)) BETWEEN 65 AND 90)""")
 
     for row in result.fetchall():
-        print("({}, {})".format(row[0], row[1]))
+        print("({}, '{}')".format(row[0], row[1]))
