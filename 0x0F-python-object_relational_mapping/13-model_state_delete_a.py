@@ -19,7 +19,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).filter(State.name.like("%a%")).all()
+    result = session.query(State).filter(State.name.like("%a%"))
 
     for record in result:
         session.delete(record)
