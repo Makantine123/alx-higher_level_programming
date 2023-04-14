@@ -25,4 +25,4 @@ if __name__ == "__main__":
         order_by(City.id)
 
     for row in result.all():
-        print("{}: ({}) {}".format(row[0], row[1], row[2]))
+        print("{:s}: ({:d}) {:s}".format(row[0], row[1], row[2]))
