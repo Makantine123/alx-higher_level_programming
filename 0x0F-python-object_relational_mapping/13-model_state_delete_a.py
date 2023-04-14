@@ -6,6 +6,7 @@ containing the letter 'a' from the database
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
+from sqlalchemy import func
 from sys import argv
 
 
@@ -19,7 +20,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).filter(State.name.contains("%a%"))
+    result = session.query(State).\
+        filter(State.name.contains(func.binary("%a%")))
 
     for record in result:
         session.delete(record)
