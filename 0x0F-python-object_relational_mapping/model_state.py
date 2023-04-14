@@ -12,6 +12,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """Class contains state table"""
     __tablename__ = 'states'
 
     id = Column(Integer, nullable=False, primary_key=True)
