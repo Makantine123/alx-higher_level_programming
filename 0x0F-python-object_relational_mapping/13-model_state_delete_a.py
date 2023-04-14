@@ -2,7 +2,6 @@
 """Script deletes all the State objects with name
 containing the letter 'a' from the database """
 
-
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
@@ -21,9 +20,7 @@ if __name__ == "__main__":
     session = Session()
 
     result = session.query(State).filter(State.name.like('%a%'))\
-        .order_by(State.id)
+        .delete()
 
-    for record in result.all():
-        session.delete(record)
     session.commit()
     session.close()
