@@ -3,12 +3,13 @@
 Script deletes all the State objects with name
 containing the letter 'a' from the database
 """
-if __name__ == "__main__":
-    from model_state import Base, State
-    from sqlalchemy.orm import sessionmaker
-    from sqlalchemy import create_engine
-    from sys import argv
 
+from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+from sys import argv
+
+if __name__ == "__main__":
     if (len(argv)) != 4:
         exit()
 
@@ -20,7 +21,7 @@ if __name__ == "__main__":
     session = Session()
 
     state_a = session.query(State).filter(State.name.like('%a%'))
-    for state in state_a:
+    for state in state_a.all():
         session.delete(state)
     session.commit()
     session.close()
