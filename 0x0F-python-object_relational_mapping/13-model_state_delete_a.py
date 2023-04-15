@@ -18,8 +18,5 @@ if __name__ == "__main__":
     result = session.query(State).\
         filter(State.name.like("%a%")).all()
 
-    if (result):
-        for record in result:
-            session.delete(record)
-        session.commit()
-    session.close()
+    session.delete(result)
+    session.commit()
