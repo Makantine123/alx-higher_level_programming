@@ -6,6 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sys import argv
 from relationship_state import Base, State
+from relationship_city import City
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".
@@ -19,7 +20,9 @@ if __name__ == "__main__":
     session = Session()
 
     newState = State(name="California")
-    session.add(newState)
+    newCity = City(name="San Francisco")
+    newState.cities.append(newCity)
+    session.add(newCity)
     session.commit()
     """newCity = City(name="San Francisco", state="California")
     session.add(newCity)
