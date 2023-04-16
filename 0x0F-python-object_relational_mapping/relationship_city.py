@@ -4,9 +4,7 @@ Script contains class definition of a City and an instance of
 Base = declarative_base()
 """
 from sqlalchemy import Column, ForeignKey, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from relationship_state import Base, State
 
 
 class City(Base):
