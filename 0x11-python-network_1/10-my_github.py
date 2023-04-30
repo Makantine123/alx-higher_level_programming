@@ -17,7 +17,7 @@ if __name__ == "__main__":
     auth = HTTPBasicAuth(username, password)
 
     response = requests.get(
-        "https://api.github.com/users", auth=auth)
+        "https://api.github.com/users", auth=(username, password))
 
     if response.ok:
         data = response.json()
