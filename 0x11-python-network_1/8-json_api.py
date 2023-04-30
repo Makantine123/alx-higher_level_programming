@@ -19,15 +19,12 @@ if __name__ == "__main__":
 
     response = requests.post(url, data)
 
-    if response.ok:
-        try:
-            json_data = response.json()
-            if len(json_data):
-                print("No result")
-            else:
-                print("[{}] {}".format(json_data.get('id'),
-                                       json_data.get('name')))
-        except ValueError:
-            print("Not a valid JSON")
-    else:
-        print("Error code: {}".format(response.status_code))
+    try:
+        json_data = response.json()
+        if len(json_data):
+            print("No result")
+        else:
+            print("[{}] {}".format(json_data.get('id'),
+                                   json_data.get('name')))
+    except ValueError:
+        print("Not a valid JSON")
