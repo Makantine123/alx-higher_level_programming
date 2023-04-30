@@ -15,7 +15,7 @@ if __name__ == "__main__":
         q = ""
 
     data = {'q': q}
-    url = 'http://0.0.0.0:500/search_user'
+    url = 'http://0.0.0.0:5000/search_user'
 
     response = requests.post(url, data)
 
