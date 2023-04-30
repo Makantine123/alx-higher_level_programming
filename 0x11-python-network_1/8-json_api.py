@@ -15,7 +15,7 @@ if __name__ == "__main__":
         q = ""
 
     data = {'q': q}
-    url = "http://0.0.0.0:500/search_user"
+    url = 'http://0.0.0.0:500/search_user'
 
     response = requests.post(url, data)
 
@@ -25,7 +25,8 @@ if __name__ == "__main__":
             if len(json_data):
                 print("No result")
             else:
-                print("[{}] {}".format(json_data["id"], json_data["name"]))
+                print("[{}] {}".format(json_data.get('id'),
+                                       json_data.get('name')))
         except ValueError:
             print("Not a valid JSON")
     else:
