@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     try:
         json_data = response.json()
-        if len(json_data):
+        if len(json_data) == 0:
             print("No result")
         else:
             print("[{}] {}".format(json_data.get('id'),
