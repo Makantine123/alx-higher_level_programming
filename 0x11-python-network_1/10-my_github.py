@@ -14,10 +14,8 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
 
-    auth = HTTPBasicAuth(username, password)
-
     response = requests.get(
-        "https://api.github.com/users", auth=(username, password))
+        "https://api.github.com/user", auth=(username, password))
 
     if response.ok:
         data = response.json()
