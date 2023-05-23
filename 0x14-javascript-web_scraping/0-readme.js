@@ -2,7 +2,7 @@
 // Script reads and prints the content of a file
 
 const fs = require('fs');
-const filepath = promptargv[2];
+const file = promptargv[2];
 
 fs.readFile(file, 'utf-8', (error, data)) = {
 	if (error) {
